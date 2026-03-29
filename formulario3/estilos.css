@@ -1,1 +1,75 @@
+/* Fondo general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+}
 
+/* Título */
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+/* Formulario */
+form {
+    background-color: white;
+    width: 400px;
+    margin: 30px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+}
+
+/* Inputs y select */
+input, select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+}
+
+/* Efecto al seleccionar */
+input:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Checkboxes */
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 5px;
+}
+
+/* Botón enviar */
+input[type="submit"] {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Botón limpiar */
+input[type="reset"] {
+    background-color: #6c757d;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px;
+}
+
+/* Hover botones */
+input[type="submit"]:hover {
+    background-color: #0056b3;
+}
+
+input[type="reset"]:hover {
+    background-color: #5a6268;
+}
