@@ -1,79 +1,80 @@
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>Formulario de Inscripción</title>
+    <title>Curriculum - Miguel Rios</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
+
 <body>
 
-<h1>Formulario de Inscripción</h1>
+    <table class="contenedor">
+        
+        <tr class="encabezado">
+            <td colspan="2">
+                <table width="100%">
+                    <tr>
+                        <td width="70%">
+                            <h1>MIGUEL RIOS</h1>
+                            <h3>Ingeniería de Software</h3>
+                            <p>
+                                Girardot - Cundinamarca<br>
+                                Correo: miguelrios27ap@gmail.com<br>
+                                Tel: 3209722915
+                            </p>
+                        </td>
+                        <td width="30%" align="center">
+                            <img src="../miguel.jpg" class="foto">
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
 
-<form action="mailto:unaprueba" method="post">
+        <tr>
+            <td class="columna-izquierda">
+                <h2>Perfil Profesional</h2>
+                <p>
+                    Estudiante de ingeniería interesado en el desarrollo de software, 
+                    aplicaciones web y soluciones tecnológicas.
+                </p>
 
-Tipo de documento:
-<select name="tipo_documento" required>
-<option value="">Seleccione</option>
-<option value="cc">Cédula</option>
-<option value="ti">Tarjeta de Identidad</option>
-<option value="ce">Cédula de Extranjería</option>
-</select>
-<br><br>
+                <h2>Experiencia Laboral</h2>
+                <p>
+                    <b>Auxiliar de soporte tecnico</b><br>
+                    Empresa de tecnologia (2024 - 2025)
+                </p>
+                <ul>
+                    <li>Mantenimiento de equipos.</li>
+                    <li>Soporte a usuarios.</li>
+                </ul>
+            </td>
 
-Número de documento:
-<input type="text" name="documento" pattern="[0-9]{5,15}" required>
-<br><br>
+            <td class="columna-derecha">
+                <h2>Habilidades</h2>
+                <ul>
+                    <li>HTML</li>
+                    <li>Java</li>
+                    <li>Bases de datos</li>
+                </ul>
 
-Nombres:
-<input type="text" name="nombres" minlength="3" maxlength="64" required>
-<br><br>
+                <h2>Educacion</h2>
+                <p>
+                    <b>Universidad de Cundinamarca</b><br>
+                    Ingenieria de Software (2023 - Actualidad)
+                </p>
 
-Apellidos:
-<input type="text" name="apellidos" minlength="3" maxlength="64" required>
-<br><br>
+                <h2>Referencias</h2>
+                <p>
+                    Juan Burgoz<br>
+                    Ingeniero de sistemas<br>
+                    Tel: 3138185929
+                </p>
+            </td>
+        </tr>
 
-Dirección:
-<input type="text" name="direccion" required>
-<br><br>
-
-Teléfono fijo:
-<input type="tel" name="telefono_fijo" pattern="[0-9]{7,10}" required>
-<br><br>
-
-Teléfono celular:
-<input type="tel" name="celular" pattern="[0-9]{10}" required>
-<br><br>
-
-Correo electrónico:
-<input type="email" name="correo" pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" required>
-<br><br>
-
-Usuario:
-<input type="text" name="usuario" pattern="[A-Za-z]{3,14}[0-9]{0,2}" minlength="3" maxlength="16" required>
-<br><br>
-
-Password:
-<input type="password" name="password"
-pattern="(?=.*[A-Z])(?=(.*[a-z]){2,})(?=(.*[0-9]){5,})(?=.*[!\?\-\+\/&\$\.]).{16}"
-required>
-<br><br>
-
-Fecha de inscripción:
-<input type="date" name="fecha" min="2026-02-15" max="2026-03-10" required>
-<br><br>
-
-Hobbies:<br>
-<input type="checkbox" name="hobby" value="deporte"> Deporte<br>
-<input type="checkbox" name="hobby" value="musica"> Música<br>
-<input type="checkbox" name="hobby" value="lectura"> Lectura<br>
-<input type="checkbox" name="hobby" value="cine"> Cine<br>
-<br>
-
-<input type="submit" value="Enviar">
-<input type="reset" value="Limpiar">
-
-</form>
+    </table>
 
 </body>
 </html>
+
 
 
