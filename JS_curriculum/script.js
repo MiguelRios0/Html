@@ -1,37 +1,27 @@
-// Espera a que cargue toda la página
 document.addEventListener("DOMContentLoaded", function () {
 
-    const formulario = document.querySelector("form");
+    // 1. Cambiar color del nombre
+    const nombre = document.querySelector("h1");
+    nombre.style.color = "#ffcc00";
 
-    formulario.addEventListener("submit", function (event) {
+    // 2. Agregar mensaje dinámico
+    const mensaje = document.createElement("p");
+    mensaje.textContent = "Bienvenido a mi hoja de vida";
+    mensaje.style.fontWeight = "bold";
+    mensaje.style.color = "white";
 
-        // Obtener valores
-        const password = document.querySelector('input[name="password"]').value;
-        const usuario = document.querySelector('input[name="usuario"]').value;
+    nombre.parentNode.appendChild(mensaje);
 
-        // Validación extra de contraseña
-        if (password.length < 16) {
-            alert("La contraseña debe tener exactamente 16 caracteres.");
-            event.preventDefault();
-            return;
-        }
+    // 3. Efecto en la imagen
+    const foto = document.querySelector(".foto");
 
-        // Validación simple de usuario
-        if (usuario.length < 3) {
-            alert("El usuario debe tener al menos 3 caracteres.");
-            event.preventDefault();
-            return;
-        }
+    foto.addEventListener("mouseover", function () {
+        foto.style.transform = "scale(1.1)";
+        foto.style.transition = "0.3s";
+    });
 
-        // Confirmación antes de enviar
-        let confirmacion = confirm("¿Seguro que deseas enviar el formulario?");
-        if (!confirmacion) {
-            event.preventDefault();
-            return;
-        }
-
-        // Si todo está bien
-        alert("Formulario enviado correctamente");
+    foto.addEventListener("mouseout", function () {
+        foto.style.transform = "scale(1)";
     });
 
 });
