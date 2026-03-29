@@ -4,7 +4,6 @@
     <title>Formulario de Inscripción</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<script src="script.js"></script>
 <body>
 
 <h1>Formulario de Inscripción</h1>
@@ -73,7 +72,9 @@ Hobbies:<br>
 <input type="reset" value="Limpiar">
 
 </form>
-
+    
+<script src="script.js"></script>
+    
 </body>
 </html>
 
