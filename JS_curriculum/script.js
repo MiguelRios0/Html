@@ -1,81 +1,40 @@
-<html>
-<head>
-    <meta charset="UTF-8">
-    <title>Formulario de Inscripción</title>
-    <link rel="stylesheet" href="estilos.css">
-</head>
-<body>
+// Espera a que cargue toda la página
+document.addEventListener("DOMContentLoaded", function () {
 
-<h1>Formulario de Inscripción</h1>
+    const formulario = document.querySelector("form");
 
-<form action="mailto:unaprueba" method="post">
+    formulario.addEventListener("submit", function (event) {
 
-Tipo de documento:
-<select name="tipo_documento" required>
-<option value="">Seleccione</option>
-<option value="cc">Cédula</option>
-<option value="ti">Tarjeta de Identidad</option>
-<option value="ce">Cédula de Extranjería</option>
-</select>
-<br><br>
+        // Obtener valores
+        const password = document.querySelector('input[name="password"]').value;
+        const usuario = document.querySelector('input[name="usuario"]').value;
 
-Número de documento:
-<input type="text" name="documento" pattern="[0-9]{5,15}" required>
-<br><br>
+        // Validación extra de contraseña
+        if (password.length < 16) {
+            alert("La contraseña debe tener exactamente 16 caracteres.");
+            event.preventDefault();
+            return;
+        }
 
-Nombres:
-<input type="text" name="nombres" minlength="3" maxlength="64" required>
-<br><br>
+        // Validación simple de usuario
+        if (usuario.length < 3) {
+            alert("El usuario debe tener al menos 3 caracteres.");
+            event.preventDefault();
+            return;
+        }
 
-Apellidos:
-<input type="text" name="apellidos" minlength="3" maxlength="64" required>
-<br><br>
+        // Confirmación antes de enviar
+        let confirmacion = confirm("¿Seguro que deseas enviar el formulario?");
+        if (!confirmacion) {
+            event.preventDefault();
+            return;
+        }
 
-Dirección:
-<input type="text" name="direccion" required>
-<br><br>
+        // Si todo está bien
+        alert("Formulario enviado correctamente");
+    });
 
-Teléfono fijo:
-<input type="tel" name="telefono_fijo" pattern="[0-9]{7,10}" required>
-<br><br>
+});
 
-Teléfono celular:
-<input type="tel" name="celular" pattern="[0-9]{10}" required>
-<br><br>
-
-Correo electrónico:
-<input type="email" name="correo" pattern="[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,}" required>
-<br><br>
-
-Usuario:
-<input type="text" name="usuario" pattern="[A-Za-z]{3,14}[0-9]{0,2}" minlength="3" maxlength="16" required>
-<br><br>
-
-Password:
-<input type="password" name="password"
-pattern="(?=.*[A-Z])(?=(.*[a-z]){2,})(?=(.*[0-9]){5,})(?=.*[!\?\-\+\/&\$\.]).{16}"
-required>
-<br><br>
-
-Fecha de inscripción:
-<input type="date" name="fecha" min="2026-02-15" max="2026-03-10" required>
-<br><br>
-
-Hobbies:<br>
-<input type="checkbox" name="hobby" value="deporte"> Deporte<br>
-<input type="checkbox" name="hobby" value="musica"> Música<br>
-<input type="checkbox" name="hobby" value="lectura"> Lectura<br>
-<input type="checkbox" name="hobby" value="cine"> Cine<br>
-<br>
-
-<input type="submit" value="Enviar">
-<input type="reset" value="Limpiar">
-
-</form>
-    
-<script src="script.js"></script>
-    
-</body>
-</html>
 
 
